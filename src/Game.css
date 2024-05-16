@@ -1,0 +1,116 @@
+:root{
+    --background-color: cornflowerblue;
+    --board-background-color: bisque;
+    --board-border-color: burlywood;
+    --board-box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
+    --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --panel-background-color: lightgoldenrodyellow;
+    --panel-border-color: burlywood;
+    --panel-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
+    --game-circle-border-color: black;
+    --player-0-color: white;
+    --player-1-color: red;
+    --player-2-color: blue;
+    --footer-button-box-shadow: 3px 5px 10px 2px rgba(0, 0, 0, 0.9);
+    --footer-button-background-color: lightblue;
+    --footer-button-border-color: chocolate;
+}
+body{
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+}
+
+.app-container{
+width: 800px;
+height: 800px;
+}
+.panel{
+position: absolute;
+background-color: var(--panel-background-color);
+border: 8px solid var(--panel-border-color);
+box-shadow: var(--panel-shadow);
+z-index: 1;
+}
+
+.header{
+    left: 50%;
+    top: 50px;
+    height: 80px;
+    width: 300px;
+    margin-inline-start: -160px;
+}
+
+.header-text{
+    font-size: 30px;
+    font-weight: bold;
+    width: 200px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.footer{
+    left: 50%;
+    top: 750px;
+    height: 80px;
+    width: 300px;
+    margin-inline-start: -160px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer button{
+    width: 140px;
+    height: 50px;
+    margin-inline-start: 5px;
+    margin-block-start: 14px;
+    background-color: var(--footer-button-background-color);
+    font-size: 22px;
+    box-shadow: var(--footer-button-box-shadow);
+    border: 5px solid var(--footer-button-border-color);
+    font-weight: bold;
+}
+
+.footer button:hover{
+    background-color: var(--footer-button-border-color);
+}
+
+.gameBoard{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 20px;
+    width: 520px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--board-background-color);
+    border: 8px solid var(--board-border-color);
+    border-radius: 8%;
+    box-shadow: var(--board-box-shadow);
+}
+
+.gameCircle{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 5px solid var(--game-circle-border-color);
+    border-radius: 50%;
+}
+
+.player_0{
+    background-color: var(--player-0-color);
+}
+
+.player_1{
+    background-color: var(--player-1-color);
+}
+
+.player_2{
+    background-color: var(--player-2-color);
+}
+
